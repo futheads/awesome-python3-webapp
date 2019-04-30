@@ -160,3 +160,8 @@ class Model(dict, metaclass=ModelMetaclass):
         if len(rs) == 0:
             return None
         return rs[0]["_num_"]
+
+    @classmethod
+    async def find(cls, pk):
+        """find object by primary key"""
+        pass

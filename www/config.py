@@ -1,5 +1,6 @@
 import config_default
 
+
 class Dict(dict):
     def __init__(self, names=(), values=(), **kwargs):
         super.__init__(**kwargs)
@@ -34,6 +35,7 @@ def to_dict(d):
     for k, v in d.items():
         D[k] = to_dict(v) if isinstance(v, dict) else v
     return D
+
 
 configs = config_default.configs
 
